@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-// #define SIZE 10
+#define SIZE 10
 
 int main() {
     // const int CAPACITY = 100; // it is a good idea to use a named constant for the size
 
-    double values[10] = {12, 124, 2, 31, 53.3, 234.45, 67, 45}; // size is set to 10 but initial size is 8 so 9th and 10th elements are set to 0
+    double values[] = {12, 124, 2, 31, 53.3, 234.45, 67, 45}; // size is set to 10 but initial size is 8 so 9th and 10th elements are set to 0
 
     // double values[CAPACITY];
 
@@ -56,7 +56,17 @@ int main() {
 
 
     // element separators
-    for ()
+    for (int i = 0; i < 8; i++) {
+        printf("%.2lf", values[i]);
+        if (i < 7)
+            printf(" | ");
+    }
+
+    
+    // length of an array which does not have an inital size
+    printf("\nlength of the array: %d", sizeof(values) / sizeof(values[0]));
+    
+
 
     return 0;
 }
