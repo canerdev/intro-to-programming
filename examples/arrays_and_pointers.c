@@ -26,8 +26,6 @@ int main() {
     
     printf("3rd element of the array: %d\n", arr[2]); 
     printf("3rd element of the array: %d\n", *(arr + 2));
-
-    printf("sum of the elements in the array is: %d", sum(arr, 5)); 
-    
+    printf("sum of the elements in the array is: %d\n", sum(arr, 5)); 
     return EXIT_SUCCESS;
 }
