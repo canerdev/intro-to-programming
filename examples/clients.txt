@@ -1,2 +1,6 @@
-1 sofh 23.00
-2 oaf 232414.00
+1 caner 23.00
+2 aslan 0
+3 furkan -144
+4 yigit 0
+5 kerem 180
+6 anil 20
