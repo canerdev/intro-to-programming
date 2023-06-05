@@ -30,6 +30,25 @@ int main() {
         fclose(cfPtr); // close every file you open after you are done with them
     }
 
+    // reading and printing a sequential file
+    if ((cfPtr = fopen("clients.txt", "r")) == NULL) {
+        puts("File could not be opened");
+    } else {
+        unsigned int account; // account number
+        char name[30]; // account name
+        double balance; // account balance
+
+        printf("%-10s%-13s%s\n", "Account", "Name", "Balance");
+        fscanf(cfPtr, "%d%29s%lf", &account, name, &balance); // fscanf receives a file pointer for the file being read
+
+        // write account number, name and balance into file with fprintf
+        while (!feof(cfPtr)) {
+            printf("%-10d%-13s%7.2lf\n", account, name, balance);
+            fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+        }
+
+        fclose(cfPtr); // close every file you open after you are done with them
+    }
     return EXIT_SUCCESS;
 }
 
